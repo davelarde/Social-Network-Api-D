@@ -1,0 +1,25 @@
+{
+  "name": "social-network-api-d",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davelarde/Social-Network-Api-D.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davelarde/Social-Network-Api-D/issues"
+  },
+  "homepage": "https://github.com/davelarde/Social-Network-Api-D#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongo": "^0.1.0",
+    "mongoose": "^6.3.4"
+  }
+}
