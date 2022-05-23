@@ -4,7 +4,7 @@ const User = require('../models/User');
 const thoughtController = {
     // get all thoughts
     getAllThoughts(req, res) {
-        Thought.find({})
+        Thought.find()
             // .populate('reactionId')
             .then(dbThoughtData => res.json(dbThoughtData))
             .catch(err => {

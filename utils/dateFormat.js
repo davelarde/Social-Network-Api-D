@@ -58,8 +58,8 @@ module.exports = (
 
 
 
- const dateObj - new Date(timestamp);
- const formattedMonth = month.[dateObj.getMonth()];
+ const dateObj = new Date(timestamp);
+ const formattedMonth = months[dateObj.getMonth()];
 
  let dayOfMonth;
 

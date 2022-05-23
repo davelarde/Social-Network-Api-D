@@ -1,16 +1,20 @@
+const mongoose = require('mongoose');
 const express = require('express');
-const db = require('./config/connection');
-const routes = require('./routes');
 
-const PORT = 3001;
+// require('dotenv').config();
+
 const app = express();
+const PORT = process.env.PORT || 3001;
 
-app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(routes);
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static('public'));
 
-db.once('open', () => {
-  app.listen(PORT, () => {
-    console.log(`API server running on port ${PORT}!`);
-  });
-});
+app.use(require('./routes'));
+
+
+
+// Use this to log mongo queries being executed!
+// mongoose.set('debug', true);
+
+app.listen(PORT, () => console.log(`🌍 Connected on localhost:${PORT}`));

@@ -2,7 +2,7 @@ const {User,Thought} = require('../models');
 // get all users
 const userController ={
     getAllUsers(req, res){
-        User.find({})
+        User.find()
         .then(dbUserData => res.json(dbUserData))
         .catch(err =>{
             console.log(err)
