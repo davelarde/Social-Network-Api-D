@@ -1,5 +1,6 @@
 const router = require('express').Router();
 
+const { route } = require('express/lib/application');
 const { get } = require('express/lib/response');
 const {
     getAllUsers,
@@ -17,3 +18,21 @@ router
 .route('/')
 .get()
 .post();
+
+router
+.route('/:id')
+.get(getUserById)
+.put(updateUser)
+.delete(deleteUser);
+
+router 
+.route('/:id/friends/:friendId')
+.post(addFriend)
+.delete(removeFriend);
+
+router 
+.route('/')
+.get(getAllUsers)
+.post(createUser);
+
+module.exports = router;
